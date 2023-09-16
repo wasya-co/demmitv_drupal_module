@@ -1,0 +1,18 @@
+
+example.form:
+  path: '/example-form'
+  defaults:
+    _title: 'Example form'
+    _form: '\Drupal\demmitv_drupal_module\Form\ExampleForm'
+  requirements:
+    _permission: 'access content'
+
+new_sketch.form:
+  path: '/sketches/new'
+  defaults:
+    _title: 'New Sketch'
+    _form: '\Drupal\demmitv_drupal_module\Form\NewSketchForm'
+  requirements:
+    _permission: 'access content'
+
+
