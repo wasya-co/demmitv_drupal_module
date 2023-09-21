@@ -1,18 +1,30 @@
 
-example.form:
-  path: '/example-form'
-  defaults:
-    _title: 'Example form'
-    _form: '\Drupal\demmitv_drupal_module\Form\ExampleForm'
-  requirements:
-    _permission: 'access content'
+# example.form:
+#   path: '/example-form'
+#   defaults:
+#     _title: 'Example form'
+#     _form: '\Drupal\demmitv_drupal_module\Form\ExampleForm'
+#   requirements:
+#     _permission: 'access content'
 
-new_sketch.form:
+sketch.new:
   path: '/sketches/new'
   defaults:
     _title: 'New Sketch'
-    _form: '\Drupal\demmitv_drupal_module\Form\NewSketchForm'
+    _entity_form: node.default
+    # node_type: 'node'
+  requirements:
+    _role: 'authenticated'
+  options:
+    parameters:
+      node_type:
+        with_config_overrides: TRUE
+
+user.dashboard:
+  path: '/dashboard'
+  defaults:
+    _title: 'Dashboard'
+    _controller: '\Drupal\demmitv_drupal_module\Controller\UsersController::dashboard'
   requirements:
     _permission: 'access content'
-
 

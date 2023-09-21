@@ -11,12 +11,12 @@
 function demmitv_drupal_module_theme($existing, $type, $theme, $path) {
 
   return [
-    'ish_locations_show' => [
+    'users_dashboard' => [
       'render element' => 'requirements',
-      'template' => 'show',
-      'path' => $path . '/templates/locations',
+      'template' => 'dashboard',
+      'path' => $path . '/templates/users',
       'variables' => [
-        'location' => NULL,
+        // 'location' => NULL,
         // 'request' => NULL,
       ],
     ],
